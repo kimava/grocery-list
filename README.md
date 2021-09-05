@@ -1,9 +1,9 @@
 # Grocery List
 
 This project was made for a personal PWA project. \
-LIVE SERVER : 
+LIVE SERVER : https://grocery-shop-list.netlify.app/
+<img width="1270" alt="grocery-list" src="https://user-images.githubusercontent.com/47381555/132132293-1162b9ab-4399-45f0-89b3-83142d6e6bf5.png">
 
-<img width="1282" alt="grocery-list" src="https://user-images.githubusercontent.com/47381555/132131698-c89327b7-8973-4c70-81df-3aabab3ee3ad.png">
 
 ## `Features`
 - add grocery items
