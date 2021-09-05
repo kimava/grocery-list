@@ -21,7 +21,7 @@ function App() {
       if (listitem.id === selected.id) {
         return { ...selected, checked: !selected.checked };
       }
-      return updated;
+      return listitem;
     });
     setList(updated);
   }
@@ -31,7 +31,7 @@ function App() {
       if (listitem.id === selected.id) {
         return { ...selected, count: selected.count + 1 };
       }
-      return updated;
+      return listitem;
     });
     setList(updated);
   }
@@ -42,7 +42,7 @@ function App() {
         const count = selected.count - 1;
         return { ...selected, count: count < 1 ? 1 : count };
       }
-      return updated;
+      return listitem;
     });
     setList(updated);
   }
