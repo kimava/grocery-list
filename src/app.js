@@ -54,7 +54,10 @@ function App() {
 
   return (
     <div>
-      <Header />
+      <Header
+        count={list.length}
+        left={list.filter((item) => item.checked === true).length}
+      />
       <ShopList
         list={list}
         handleAdd={handleAdd}
