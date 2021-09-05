@@ -1,5 +1,11 @@
 import React from 'react';
 import styles from './item.module.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {
+  faMinusCircle,
+  faPlusCircle,
+  faTimes,
+} from '@fortawesome/free-solid-svg-icons';
 
 const Item = ({
   item,
@@ -25,18 +31,18 @@ const Item = ({
   };
 
   return (
-    <li>
+    <li className={styles.list}>
       <input type='checkbox' className={styles.input} onClick={onToggle} />
-      <label>{item.item}</label>
+      <p className={styles.item}>{item.item}</p>
       <button onClick={onMinus}>
-        <i className='fas fa-minus-circle'></i>
+        <FontAwesomeIcon icon={faMinusCircle} className={styles.icon} />
       </button>
-      <span>{item.count}</span>
+      <span className={styles.count}>{item.count}</span>
       <button onClick={onPlus}>
-        <i className='fas fa-plus-circle'></i>
+        <FontAwesomeIcon icon={faPlusCircle} className={styles.icon} />
       </button>
       <button onClick={onDelete}>
-        <i className='fas fa-times'></i>
+        <FontAwesomeIcon icon={faTimes} className={styles.delete} />
       </button>
     </li>
   );

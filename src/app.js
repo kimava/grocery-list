@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import './app.css';
-import Header from './components/header';
-import ShopList from './components/shop_list';
+import Header from './components/header/header';
+import ShopList from './components/shop_list/shop_list';
 
 function App() {
   const [list, setList] = useState([
-    { id: 1, item: 'sugar', count: 1, checked: false },
+    { id: 1, item: 'item', count: 1, checked: false },
   ]);
 
   function handleAdd(item) {
@@ -53,7 +53,7 @@ function App() {
   }
 
   return (
-    <div>
+    <div className='container'>
       <Header
         count={list.length}
         left={list.filter((item) => item.checked === true).length}

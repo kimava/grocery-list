@@ -1,10 +1,12 @@
 import React from 'react';
+import styles from './header.module.css';
 
 const Header = ({ count, left }) => (
   <div>
     <h1>Shopping List</h1>
-    <span>Total {count} items</span>
-    <span>{count - left} items left</span>
+    <span className={styles.count}>
+      {count - left} / {count} items left
+    </span>
   </div>
 );
 

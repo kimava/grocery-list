@@ -1,6 +1,7 @@
 import React from 'react';
-import AddForm from './add_form';
-import Item from './item';
+import AddForm from '../add_form/add_form';
+import Item from '../item/item';
+import styles from './shop_list.module.css';
 
 const ShopList = ({
   list,
@@ -11,8 +12,8 @@ const ShopList = ({
   handleDelete,
 }) => {
   return (
-    <div>
-      <ul>
+    <div className={styles.container}>
+      <ul className={styles.list}>
         {list.map((item) => (
           <Item
             key={item.id}

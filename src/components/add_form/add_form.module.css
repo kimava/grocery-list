@@ -1,0 +1,36 @@
+.form {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.input {
+  margin-right: 0.5rem;
+  padding: 0.5rem 1rem;
+  width: 85%;
+  font-size: 1.4rem;
+  background-color: transparent;
+  border: 1px solid gray;
+  border-radius: 5px;
+}
+
+.input:focus {
+  outline: none;
+}
+
+.addBtn {
+  font-family: inherit;
+  font-size: 1.4rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 36rem) {
+  .input {
+    padding: 0.2rem 0.5rem;
+    font-size: 1rem;
+  }
+
+  .addBtn {
+    font-size: 1rem;
+  }
+}
