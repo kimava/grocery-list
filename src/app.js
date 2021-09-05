@@ -8,6 +8,14 @@ function App() {
     { id: 1, item: 'sugar', count: 1, checked: false },
   ]);
 
+  function handleAdd(item) {
+    const updated = [
+      ...list,
+      { id: Date.now(), item, count: 1, checked: false },
+    ];
+    setList(updated);
+  }
+
   function handleCheckbox(selected) {
     const updated = list.map((listitem) => {
       if (listitem.id === selected.id) {
@@ -49,6 +57,7 @@ function App() {
       <Header />
       <ShopList
         list={list}
+        handleAdd={handleAdd}
         handleCheckbox={handleCheckbox}
         handleIncrement={handleIncrement}
         handleDecrement={handleDecrement}
